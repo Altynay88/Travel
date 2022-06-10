@@ -716,7 +716,7 @@ input {
 }
 .stories__background {
   background-repeat: no-repeat;
-  background-image: url(../images/footer.jpg);
+  background-image: url(../images/stories.jpg);
   background-size: cover;
 }
 .stories__background-opacity {
