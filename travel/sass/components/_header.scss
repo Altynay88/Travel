@@ -1,5 +1,5 @@
 header {
-    background-image: url(../../images/main.jpg);
+    background-image: url(../images/main.jpg);
     height: 765px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -34,7 +34,7 @@ header {
 
         &::before {
             content: " ";
-            background-image: url(../../images/logo.svg);
+            background-image: url(../images/logo.svg);
             height: 30px;
             width: 30px;
             display: block;
