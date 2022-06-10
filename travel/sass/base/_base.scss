@@ -1,0 +1,63 @@
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Aleo', serif;
+}
+
+h1 {
+    color: $color-white;
+    margin: 0;
+    @include font(80px, 700, normal, 96px);
+}
+
+h2 {
+    @extend %font-additional;
+    text-transform: uppercase;
+    color: $color-main;
+    text-align: center;
+    @include font(40px, 500, normal, 52.92px);
+}
+
+h3 {
+    color: $color-buttons;
+    @include font(35px, 400, normal, 42px);
+    padding-bottom: 23px;
+}
+
+p {
+    color: $color-buttons;
+    @include font(20px, 400, normal, 24px);
+}
+
+a {
+    text-decoration: none
+}
+
+.navigation__link {
+    @extend %font-additional;
+    color: $color-white;
+    list-style: none;
+    padding: 0 21px;
+    cursor: pointer;
+    @include font(16px, 500, normal, 21.17px);
+
+    &:hover {
+        color: $color-hover;
+        @extend %transition;
+        opacity: 1;
+        text-decoration: underline;
+    }
+}
+
+::placeholder {
+    color: $color-main;
+    @include font(24px, 400, italic, 28.8px);
+}

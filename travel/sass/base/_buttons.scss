@@ -1,0 +1,48 @@
+.button {
+    padding: 10px 30px;
+    @extend %font-additional;
+    color: $color-white;
+    background-color: $color-buttons;
+    border: none;
+    border-radius: 10px;
+    @include font(16px, 500, normal, 21.17px);
+
+    &:hover {
+        color: $color-hover;
+        text-decoration: underline;
+        @extend %transition;
+        cursor: pointer;
+    }
+
+    &_long {
+        height: 59px;
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        padding-top: 15px;
+        padding-right: 37px;
+        padding-left: 30px;
+        @extend %font-additional;
+        @include font(24px, 500, normal, 31.75px);
+
+        &::before {
+            content: " ";
+            background-image: url(../../images/arrow.svg);
+            display: block;
+            width: 35px;
+            height: 22.5px;
+            margin: 10px 10px 9.5px 5px;
+        }
+    }
+}
+
+.preview__button {
+    position: absolute;
+    font-size: 24px;
+    width: 228px;
+    right: 18px;
+    top: 18px;
+    bottom: 18px;
+    padding: 13.5px 32.5px;
+    z-index: 2;
+}
