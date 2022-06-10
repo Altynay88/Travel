@@ -517,7 +517,7 @@ a {
 }
 .button_long::before {
   content: " ";
-  background-image: url(../../images/arrow.svg);
+  background-image: url(../images/arrow.svg);
   display: block;
   width: 35px;
   height: 22.5px;
@@ -541,7 +541,7 @@ a {
 }
 
 header {
-  background-image: url(../../images/main.jpg);
+  background-image: url(../images/main.jpg);
   height: 765px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -576,7 +576,7 @@ header {
 }
 .header__logo::before {
   content: " ";
-  background-image: url(../../images/logo.svg);
+  background-image: url(../images/logo.svg);
   height: 30px;
   width: 30px;
   display: block;
@@ -752,7 +752,7 @@ input {
 footer {
   background-size: cover;
   height: 61px;
-  background-image: url(../../images/footer.jpg);
+  background-image: url(../images/footer.jpg);
   background-repeat: no-repeat;
   background-position: center bottom;
 }
