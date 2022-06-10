@@ -37,10 +37,6 @@ p {
     @include font(20px, 400, normal, 24px);
 }
 
-a {
-    text-decoration: none
-}
-
 .navigation__link {
     @extend %font-additional;
     color: $color-white;
@@ -48,6 +44,7 @@ a {
     padding: 0 21px;
     cursor: pointer;
     @include font(16px, 500, normal, 21.17px);
+    text-decoration: none;
 
     &:hover {
         color: $color-hover;
