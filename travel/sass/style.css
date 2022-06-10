@@ -458,10 +458,6 @@ p {
   line-height: 24px;
 }
 
-a {
-  text-decoration: none;
-}
-
 .navigation__link {
   color: #FFFFFF;
   list-style: none;
@@ -471,6 +467,7 @@ a {
   font-weight: 500;
   font-style: normal;
   line-height: 21.17px;
+  text-decoration: none;
 }
 .navigation__link:hover {
   color: #cdcdcd;
