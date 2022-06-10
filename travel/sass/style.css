@@ -715,7 +715,7 @@ input {
   padding-top: 10px;
 }
 .stories__background {
-  background-image: url(../../images/footer.jpg);
+  background-image: url(../images/footer.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
