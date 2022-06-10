@@ -1,0 +1,71 @@
+.destinations {
+    &__wrapper {
+        padding-top: 17px;
+        padding-bottom: 80px;
+    }
+
+    &__slider {
+        max-width: 1440px;
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        height: 845px;
+        column-gap: 60px;
+        padding-top: 46px;
+        margin-bottom: 24px;
+    }
+
+    &__slide {
+        transform: translateX(-540px);
+    }
+
+    &__img {
+        position: relative;
+    }
+
+    &__text {
+        position: absolute;
+        top: 718px;
+        left: 15px;
+
+        &-usa {
+            top: 713px;
+        }
+    }
+
+    &__text span {
+        text-transform: uppercase;
+        @extend %font-additional;
+        color: $color-white;
+        @include font(32px, 500, normal, 42px);
+    }
+
+    &__dots {
+        width: 85px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .dot {
+        border: none;
+        background-color: $color-main;
+        opacity: 0.5;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        @extend %transition;
+
+        &--active {
+            background-color: $color-main;
+            opacity: 1;
+        }
+    }
+
+    &__button {
+        text-align: center;
+        padding-top: 40px;
+    }
+}

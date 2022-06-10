@@ -1,0 +1,36 @@
+footer {
+    background-size: cover;
+    height: 61px;
+    background-image: url(../../images/footer.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.footer {
+    width: 729px;
+    display: flex;
+    height: 33.65px;
+    justify-content: space-between;
+
+    &__wrapper {
+        padding-top: 18px;
+        display: flex;
+        justify-content: end;
+    }
+
+    &__text {
+        color: $color-white;
+        @include font(16px, 500, normal, 21.17px);
+        @extend %font-additional;
+        width: 260px;
+        height: 21px;
+        align-items: center;
+        padding-top: 6.3px;
+    }
+
+    &__icons {
+        display: flex;
+        justify-content: space-between;
+        width: 141px; 
+    }
+}
