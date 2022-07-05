@@ -24,12 +24,19 @@ h2 {
     color: $color-main;
     text-align: center;
     @include font(40px, 500, normal, 52.92px);
+     @include media-mobile {
+         @include font(14px, 500, normal, 18.52px);
+    }
 }
 
 h3 {
     color: $color-buttons;
     @include font(35px, 400, normal, 42px);
     padding-bottom: 23px;
+         @include media-mobile {
+     @include font(11px, 700, normal, 13px);
+      padding-bottom: 10px;
+    }
 }
 
 p {

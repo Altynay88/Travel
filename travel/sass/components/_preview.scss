@@ -1,25 +1,30 @@
 .preview {
     &__content {
         width: 892px;
-        height: 422px;
         padding-top: 30px;
+
+        @include media-mobile {
+            display: none;
+        }
     }
 
     &__text {
         font-family: 'Aleo', serif;
-        font-weight: 700;
-        font-style: italic;
-        font-size: 20px;
-        line-height: 24px;
         color: $color-white;
         margin: 0;
         padding: 35px 0 46px 0;
         letter-spacing: -0.1px;
+        @include font(20px, 700, italic, 24px);
     }
+}
 
-    &__form {
-        position: relative;
-        width: 892px;
+.preview__form {
+    position: relative;
+    width: 892px;
+
+    @include media-mobile {
+        width: 360px;
+        margin-top: 37px;
     }
 }
 
@@ -34,4 +39,17 @@ input {
     filter: opacity(70%);
     outline: none;
     letter-spacing: -0.7px;
+
+    @include media-mobile {
+        height: 48px;
+        padding: 16px 16px;
+        letter-spacing: -0.4px;
+    }
+
+}
+
+::placeholder {
+    @include media-mobile {
+        @include font(14px, 400, italic, 16.8px);
+    }
 }

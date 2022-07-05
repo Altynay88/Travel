@@ -4,6 +4,10 @@ footer {
     background-image: url(../images/footer.jpg);
     background-repeat: no-repeat;
     background-position: center bottom;
+      @include media-mobile {
+          background-image: url(../images/footer-mobile.jpg);  
+          height: 65px;
+        }
 }
 
 .footer {
@@ -11,11 +15,16 @@ footer {
     display: flex;
     height: 33.65px;
     justify-content: space-between;
-
+ @include media-mobile {
+          width: 350px;
+        }
     &__wrapper {
         padding-top: 18px;
         display: flex;
         justify-content: end;
+           @include media-mobile {
+         padding-top: 15px;
+        }
     }
 
     &__text {
@@ -26,11 +35,17 @@ footer {
         height: 21px;
         align-items: center;
         padding-top: 6.3px;
+        @include media-mobile {
+          display: none;
+        }
     }
 
     &__icons {
         display: flex;
         justify-content: space-between;
         width: 141px; 
+        @include media-mobile {
+          margin: 0 auto;
+        }
     }
 }

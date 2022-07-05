@@ -25,6 +25,7 @@
     <header>
         <div class="header">
             <div class="wrapper header__wrapper">
+                <span class="header__mobile-logo"> <img src="../images/logo.svg" alt=""></span>
                 <a class="header__logo" href="#">Travel Portal</a>
                 <nav class="header__navigation">
                     <ul class="navigation">
@@ -37,6 +38,9 @@
                 <div class="header__button">
                     <button class="button">Login</button>
                 </div>
+                <span class="humburger">
+                    <span class="humburger__line"></span>
+                </span>
             </div>
         </div>
         <section class="preview" id="preview">
@@ -45,11 +49,11 @@
                     <h1>Explore the beauty of the World</h1>
                     <p class="preview__text">Recieve personalized recommendations for countries, hotels, activities and
                         more</p>
-                    <form class="preview__form">
-                        <input type="text" placeholder="What would you like to do?" name="search">
-                        <button class="button preview__button">Start Planning</button>
-                    </form>
                 </div>
+                <form class="preview__form">
+                    <input type="text" placeholder="What would you like to do?" name="search">
+                    <button class="button preview__button">Start Planning</button>
+                </form>
             </div>
         </section>
     </header>
@@ -61,17 +65,17 @@
                     <div class="steps__icons-inner">
                         <span class="steps__icons-square"><object data="images/bicycle.svg"
                                 type="image/svg+xml"></object></span>
-                        <p>Tell us what you want to do</p>
+                        <p class="steps__text-mobile steps__text-first ">Tell us what you want to do</p>
                     </div>
-                    <div class="steps__icons-inner steps__icons-middle ">
+                    <div class="steps__icons-inner steps__icons-middle">
                         <span class="steps__icons-square"><object data="images/calendar.svg"
                                 type="image/svg+xml"></object></span>
-                        <p>Share us preferable dates </p>
+                        <p  class="steps__text-mobile steps__text-middle">Share us preferable dates </p>
                     </div>
-                    <div class="steps__icons-inner">
+                    <div class="steps__icons-inner  steps__icons-last">
                         <span class="steps__icons-square"><object data="images/plane.svg"
                                 type="image/svg+xml"></object></span>
-                        <p>We will give you recommendations</p>
+                        <p class="steps__text-mobile steps__text-last">We will give you recommendations</p>
                     </div>
                 </div>
             </div>
@@ -81,8 +85,8 @@
                 <h2>Popular destinations</h2>
                 <div class="destinations__slider">
                     <div class="destinations__slide">
-                        <img class="destinations__img" src="images/Island.jpg" alt="Island">
-                        <p class="destinations__text"><span>Iseland</span></p>
+                        <img class="destinations__img" src="images/Island.jpg" alt="Spain">
+                        <p class="destinations__text"><span>Spain</span></p>
                     </div>
                     <div class="destinations__slide">
                         <img class="destinations__img" src="images/Japan.jpg" alt="Japan">
@@ -91,6 +95,20 @@
                     <div class="destinations__slide">
                         <img class="destinations__img" src="images/USA.jpg" alt="USA">
                         <p class="destinations__text"><span>USA</span></p>
+                    </div>
+                </div>
+                <div class="destinations__slider-mobile">
+                    <div class="destinations__slide-mobile">
+                        <img  class="destinations__img-mobile" src="images/island-mobile.jpg" alt="Spain">
+                        <p class="destinations__text-mobile"><span>Spain</span></p>
+                    </div>
+                    <div class="destinations__slide-mobile">
+                        <img  class="destinations__img-mobile" src="images/japan-mobile.jpg" alt="Japan">
+                        <p class="destinations__text-mobile"><span>Japan</span></p>
+                    </div>
+                    <div class="destinations__slide-mobile">
+                        <img  class="destinations__img-mobile" src="images/usa-mobile.jpg" alt="USA">
+                        <p class="destinations__text-mobile"><span>USA</span></p>
                     </div>
                 </div>
                 <div class="destinations__dots">
@@ -112,7 +130,7 @@
                             <img class="stories__img" src="images/thailand.jpg" alt="Thailand">
                             <div class="stories__inner__content">
                                 <h3>10 Photos of Attractive Thailand</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                <p class="stories__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                     incididunt
                                     ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                                     ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
@@ -121,6 +139,9 @@
                                     sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
                                     id
                                     est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                                     <p class="stories__mobile-text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a...
+                                     </p>
                                 <a class="stories__link" href="#">Read More</a>
                             </div>
                         </div>
@@ -128,7 +149,7 @@
                             <img class="stories__img" src="images/utah.jpg" alt="Utah">
                             <div class="stories__inner__content">
                                 <h3>Canyonlands National Park, Utah</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                <p class="stories__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                     incididunt
                                     ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                                     ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
@@ -137,6 +158,9 @@
                                     sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
                                     id
                                     est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                                     <p class="stories__mobile-text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a...
+                                     </p>
                                 <a class="stories__link" href="#">Read More</a>
                             </div>
                         </div>
@@ -144,7 +168,7 @@
                             <img class="stories__img" src="images/mountains.jpg" alt="Mountains">
                             <div class="stories__inner__content">
                                 <h3>I left my heart in the Mountains!</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                <p  class="stories__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                     incididunt
                                     ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                                     ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
@@ -153,14 +177,17 @@
                                     sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
                                     id
                                     est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                                     <p class="stories__mobile-text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a...
+                                     </p>
                                 <a class="stories__link" href="#">Read More</a>
                             </div>
                         </div>
-                        <div class="stories__inner">
+                        <div class="stories__inner stories__inner-last ">
                             <img class="stories__img" src="images/canyon.jpg" alt="Canyon">
                             <div class="stories__inner__content">
                                 <h3>The Longest journey in my life!</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                <p  class="stories__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                     incididunt
                                     ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                                     ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
@@ -169,6 +196,9 @@
                                     sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
                                     id
                                     est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                                    <p class="stories__mobile-text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a...
+                                     </p>
                                 <a class="stories__link" href="#">Read More</a>
                             </div>
                         </div>
