@@ -2,6 +2,12 @@
     &__wrapper {
         padding-top: 17px;
         padding-bottom: 80px;
+
+        @include media-mobile {
+            width: 360px;
+            margin: 0 auto;
+            padding-bottom: 20px;
+        }
     }
 
     &__slider {
@@ -14,6 +20,10 @@
         column-gap: 60px;
         padding-top: 46px;
         margin-bottom: 24px;
+
+        @include media-mobile {
+            display: none;
+        }
     }
 
     &__slide {
@@ -42,6 +52,9 @@
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
+          @include media-mobile {
+          display: none;
+        }
     }
 
     .dot {
@@ -58,10 +71,50 @@
             background-color: $color-main;
             opacity: 1;
         }
+
+         @include media-mobile {
+            width: 8px;
+            height: 8px;
+        }
     }
 
     &__button {
         text-align: center;
         padding-top: 40px;
+          @include media-mobile {
+            padding-top: 10px;
+        }
+    }
+
+    &__slider-mobile {
+        display: none;
+
+        @include media-mobile {
+            display: block;
+            position: relative;
+            width: 360px;
+            height: 210px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+    }
+
+    &__img-mobile {
+        border-radius: 16px;
+        position: relative;
+    }
+
+    &__text-mobile {
+        position: absolute;
+        top: 8px;
+        left: 15px;
+
+    }
+
+    &__text-mobile span {
+        text-transform: uppercase;
+        @extend %font-additional;
+        color: $color-white;
+        @include font(32px, 500, normal, 42px);
     }
 }

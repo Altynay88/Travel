@@ -2,6 +2,11 @@
     &__wrapper {
         padding-top: 80px;
         padding-bottom: 50px;
+
+        @include media-mobile {
+            padding-top: 20px;
+            padding-bottom: 0px;
+        }
     }
 
     &__icons {
@@ -12,14 +17,36 @@
         padding-top: 40px;
         padding-bottom: 30px;
 
+        @include media-mobile {
+            width: 360px;
+            padding-top: 20px;
+            padding-bottom: 4px;
+        }
+
         &-inner {
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            @include media-mobile {
+                align-items: flex-start;
+            }
         }
 
         &-middle {
             margin-left: 66px;
+
+            @include media-mobile {
+                margin-left: 40px;
+                align-items: center;
+                width: 120px;
+            }
+        }
+
+        &-last {
+            @include media-mobile {
+                align-items: flex-end;
+            }
         }
     }
 
@@ -32,6 +59,40 @@
         justify-content: center;
         display: inline-flex;
         margin-bottom: 30px;
+
+        @include media-mobile {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 20px;
+
+            object {
+                width: 35px;
+                height: 31.5px;
+            }
+        }
     }
 
+    &__text-mobile {
+        @include media-mobile {
+            @include font(10px, 400, normal, 12px);
+        }
+    }
+
+    &__text-first {
+        @include media-mobile {
+            width: 85px;
+        }
+    }
+
+    &__text-middle {
+        @include media-mobile {
+            width: 111px;
+        }
+    }
+
+    &__text-last {
+        @include media-mobile {
+            margin-left: 45px;
+        }
+    }
 }

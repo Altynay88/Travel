@@ -4,6 +4,11 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-size: 100%;
+
+    @include media-mobile {
+        background-image: url(../images/main-mobile.jpg);
+        height: 251px;
+    }
 }
 
 .header {
@@ -12,10 +17,28 @@ header {
     background: rgba(242, 120, 92, 0.7);
     padding: 25px 0 24px 0;
 
+    @include media-mobile {
+        background: none;
+        box-shadow: none;
+        padding-top: 45px;
+    }
+
     &__wrapper {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include media-mobile {
+            padding: 0 16px;
+        }
+    }
+
+    &__mobile-logo {
+        display: none;
+
+        @include media-mobile {
+            display: inline-block;
+        }
     }
 
     &__logo {
@@ -24,6 +47,10 @@ header {
         text-decoration: none;
         display: flex;
         @include font(32px, 600, normal, 38.8px);
+
+        @include media-mobile {
+            display: none;
+        }
 
         &:hover {
             color: $color-hover;
@@ -41,9 +68,30 @@ header {
             margin-right: 6px;
         }
     }
+
+    &__button {
+        @include media-mobile {
+            display: none;
+        }
+    }
 }
 
 .navigation {
     display: flex;
     padding-right: 30px;
+}
+
+.header__navigation {
+    @include media-mobile {
+        display: none;
+    }
+}
+
+.humburger {
+    display: none;
+
+    @include media-mobile {
+        display: inline-block;
+        margin-right: 8px;
+    }
 }

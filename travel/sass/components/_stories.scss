@@ -8,6 +8,10 @@
         background-image: url(../images/stories.jpg);
         background-size: cover;
 
+        @include media-mobile {
+            background-image: url(../images/stories-mobile.jpg);
+        }
+
         &-opacity {
             background: rgba(255, 255, 255, 0.7);
         }
@@ -17,24 +21,68 @@
         display: flex;
         padding-top: 30px;
         column-gap: 40px;
+          @include media-mobile {
+             column-gap: 10px;
+              padding-top: 0px;
+              padding-bottom: 10px; 
+        }
     }
+&__inner-last {
+          @include media-mobile {
+              padding-bottom: 5px; 
+        }
+    }
+      &__inner__content {
+          @include media-mobile {
+              padding-top: 5px;
+        }
+      }
 
     &__title {
         padding-bottom: 40px;
+           @include media-mobile {
+         padding-bottom: 10px;
+        }
     }
 
     &__img {
         border-radius: 16px;
         box-shadow: 0px 4px 4px $color-buttons;
+
+        @include media-mobile {
+            width: 155px;
+            height: 130px;
+        }
     }
 
     &__link {
         color: $color-buttons;
         @include font(20px, 700, normal, 24px);
+          @include media-mobile {
+          @include font(9px, 700, normal, 11px); 
+        }
     }
 
     &__button {
         padding-top: 40px;
         padding-bottom: 40px;
+          @include media-mobile {
+        padding-top: 0px;
+        padding-bottom: 13px; 
+        }
+    }
+
+    &__text {
+          @include media-mobile {
+            display: none;
+        }
+    }
+   &__mobile-text {
+        display: none;
+
+        @include media-mobile {
+            display: block;
+            @include font(9px, 400, normal, 11px);
+        }
     }
 }

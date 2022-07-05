@@ -1,0 +1,33 @@
+%humburger-line {
+    display: inline-block;
+    position: absolute;
+    background-color: $color-white;
+    border-radius: 5px;
+    width: 100%;
+    height: 2.67px;
+    content: "";
+}
+
+.humburger {
+    display: inline-block;
+    position: relative;
+    width: 26.25px;
+    height: 10.67px;
+
+    &::before {
+        @extend %humburger-line;
+        top: 0;
+        right: 0;
+    }
+
+      &::after {
+        @extend %humburger-line;
+        bottom: 0;
+        right: 0;
+    }
+
+    &__line {
+        @extend %humburger-line;      
+        top: 16px;
+    }
+}
