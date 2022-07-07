@@ -60,6 +60,7 @@
         @include font(20px, 700, normal, 24px);
           @include media-mobile {
           @include font(9px, 700, normal, 11px); 
+          margin-top: -20px;
         }
     }
 

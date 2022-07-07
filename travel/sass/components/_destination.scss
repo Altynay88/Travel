@@ -52,8 +52,9 @@
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
-          @include media-mobile {
-          display: none;
+
+        @include media-mobile {
+            display: none;
         }
     }
 
@@ -71,17 +72,13 @@
             background-color: $color-main;
             opacity: 1;
         }
-
-         @include media-mobile {
-            width: 8px;
-            height: 8px;
-        }
     }
 
     &__button {
         text-align: center;
         padding-top: 40px;
-          @include media-mobile {
+
+        @include media-mobile {
             padding-top: 10px;
         }
     }
@@ -115,6 +112,47 @@
         text-transform: uppercase;
         @extend %font-additional;
         color: $color-white;
-        @include font(32px, 500, normal, 42px);
+        @include font(20px, 500, normal, 26.5px);
+    }
+
+    &__arrow-left {
+        position: absolute;
+        z-index: 5;
+        top: 90px;
+        left: 7px;
+    }
+
+    &__arrow-right {
+        position: absolute;
+        z-index: 5;
+        top: 92px;
+        left: 332px;
+    }
+
+    &__dots-mobile {
+        position: absolute;
+        z-index: 5;
+        top: 190px;
+        left: 162px;
+        width: 36px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .dot {
+        border: none;
+        background-color: $color-main;
+        opacity: 0.5;
+        width: 8px;
+        height: 8px;
+        padding: 0;
+        border-radius: 50%;
+        cursor: pointer;
+        @extend %transition;
+
+        &--active {
+            background-color: $color-main;
+            opacity: 1;
+        }
     }
 }
