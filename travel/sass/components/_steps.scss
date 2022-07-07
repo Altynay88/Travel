@@ -46,6 +46,7 @@
         &-last {
             @include media-mobile {
                 align-items: flex-end;
+                text-align: right;
             }
         }
     }
@@ -92,7 +93,7 @@
 
     &__text-last {
         @include media-mobile {
-            margin-left: 45px;
+            margin-left: 43px;
         }
     }
 }
