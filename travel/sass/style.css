@@ -583,20 +583,49 @@ p {
 }
 
 .burger {
-  display: inline-block;
-  cursor: pointer;
-  z-index: 5;
-  padding-bottom: 7px;
-  margin-right: 9px;
+  display: none;
+}
+@media (max-width: 390px) {
+  .burger {
+    margin-right: 5px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    z-index: 5;
+    width: 30px;
+    height: 15px;
+    margin-bottom: 6px;
+  }
 }
 
-.burger-bar {
+.burger:after,
+.burger:before,
+.burger span {
+  left: 0;
+  height: 2px;
   width: 26px;
-  height: 2.6px;
+  position: absolute;
   background-color: #FFFFFF;
   border-radius: 5px;
-  margin: 5px 0;
   transition: 0.3s;
+}
+
+.burger:after,
+.burger:before {
+  content: "";
+}
+
+.burger:before {
+  top: 0;
+}
+
+.burger:after {
+  bottom: 0;
+}
+
+.burger span {
+  top: 50%;
+  transform: scale(1) translate(0px, -50%);
 }
 
 .wrapper {
@@ -621,6 +650,7 @@ header {
   header {
     background-image: url(../images/main-mobile.jpg);
     height: 251px;
+    width: fit-content;
   }
 }
 
@@ -693,20 +723,40 @@ header {
   display: flex;
   padding-right: 30px;
 }
+@media (max-width: 390px) {
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    padding-right: 0px;
+    padding-top: 44px;
+  }
+}
+@media (max-width: 390px) {
+  .navigation__link {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    text-align: right;
+    padding-right: 15px;
+  }
+}
 
 @media (max-width: 390px) {
   .header__navigation {
     display: none;
+    width: 165px;
+    height: 250px;
+    background-color: #F2785C;
+    border-radius: 10px;
   }
 }
 
-.burger {
+.link-mobile {
   display: none;
 }
 @media (max-width: 390px) {
-  .burger {
-    display: inline-block;
-    margin-right: 8px;
+  .link-mobile {
+    display: block;
   }
 }
 
@@ -1113,6 +1163,10 @@ input {
   }
 }
 
+main {
+  width: fit-content;
+}
+
 footer {
   background-size: cover;
   height: 61px;
@@ -1124,6 +1178,7 @@ footer {
   footer {
     background-image: url(../images/footer-mobile.jpg);
     height: 65px;
+    width: fit-content;
   }
 }
 
@@ -1146,6 +1201,7 @@ footer {
 @media (max-width: 390px) {
   .footer__wrapper {
     padding-top: 15px;
+    width: 390px;
   }
 }
 .footer__text {

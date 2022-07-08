@@ -1,16 +1,44 @@
 .burger {
- display: inline-block;
+    display: none;
+
+    @include media-mobile {
+        margin-right: 5px;
+          position: relative;
+    display: block;
     cursor: pointer;
     z-index: 5;
-    padding-bottom: 7px;
-    margin-right: 9px;
+    width: 30px;
+    height: 15px;
+    margin-bottom: 6px;
+    }
 }
 
-.burger-bar{
-     width: 26px;
-    height: 2.6px;
-   background-color: $color-white;
-   border-radius: 5px;
-    margin: 5px 0;
+.burger:after,
+.burger:before,
+.burger span {
+    left:0;
+    height: 2px;
+    width: 26px;
+    position: absolute;
+    background-color: $color-white;
+    border-radius: 5px;
     transition: 0.3s;
+}
+
+.burger:after,
+.burger:before {
+    content: '';
+}
+
+.burger:before {
+    top:0;
+}
+
+.burger:after {
+   bottom: 0;
+}
+
+.burger span {
+   top:50%;
+   transform: scale(1) translate(0px, -50%);
 }
