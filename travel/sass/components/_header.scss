@@ -8,6 +8,7 @@ header {
     @include media-mobile {
         background-image: url(../images/main-mobile.jpg);
         height: 251px;
+        width: fit-content;
     }
 }
 
@@ -79,19 +80,40 @@ header {
 .navigation {
     display: flex;
     padding-right: 30px;
+
+    @include media-mobile {
+        display: flex;
+        flex-direction: column;
+        padding-right: 0px;
+        padding-top: 44px;
+    }
+
+    &__link {
+        @include media-mobile {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+            text-align: right;
+            padding-right: 15px;
+
+        }
+    }
 }
 
 .header__navigation {
     @include media-mobile {
         display: none;
+        width: 165px;
+        height: 250px;
+        background-color: $color-main;
+        border-radius: 10px;
     }
 }
 
-.burger {
+.link-mobile {
     display: none;
 
     @include media-mobile {
-        display: inline-block;
-        margin-right: 8px;
+        display: block;
     }
 }
