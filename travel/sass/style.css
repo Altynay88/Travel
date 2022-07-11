@@ -13,6 +13,8 @@ html {
 body {
   margin: 0;
   width: fit-content;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* HTML5 display definitions
