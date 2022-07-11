@@ -8,7 +8,6 @@ header {
     @include media-mobile {
         background-image: url(../images/main-mobile.jpg);
         height: 251px;
-        width: fit-content;
     }
 }
 
@@ -38,7 +37,8 @@ header {
         display: none;
 
         @include media-mobile {
-            display: inline-block;
+            display: block;
+            left: 16px;
         }
     }
 
@@ -102,11 +102,21 @@ header {
 
 .header__navigation {
     @include media-mobile {
-        display: none;
+        position: fixed;
+        top: 1px;
+        right: 100%;
         width: 165px;
         height: 250px;
         background-color: $color-main;
         border-radius: 10px;
+        z-index: 5;
+        transition: left 0.9s ease 0s;
+    }
+}
+
+.header__navigation._active {
+    @include media-mobile {
+        right: 0;
     }
 }
 
@@ -115,5 +125,21 @@ header {
 
     @include media-mobile {
         display: block;
+    }
+}
+
+body._lock {
+    @include media-mobile {
+        overflow: hidden;
+    }
+}
+
+.block-page._active {
+    @include media-mobile {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(41, 41, 41, 0.6);
+        overflow: hidden;
     }
 }
