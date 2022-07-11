@@ -12,6 +12,7 @@ html {
  */
 body {
   margin: 0;
+  width: fit-content;
 }
 
 /* HTML5 display definitions
@@ -591,10 +592,41 @@ p {
     position: relative;
     display: block;
     cursor: pointer;
-    z-index: 5;
+    z-index: 10;
     width: 30px;
     height: 15px;
     margin-bottom: 6px;
+  }
+}
+
+@media (max-width: 390px) {
+  .burger._active {
+    margin-right: 106px;
+    top: -20px;
+    width: 30px;
+    height: 15px;
+  }
+}
+
+@media (max-width: 390px) {
+  .burger._active span {
+    transform: scale(0) translate(0px, -50%);
+  }
+}
+
+@media (max-width: 390px) {
+  .burger._active:before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0px, -50%);
+    width: 20px;
+  }
+}
+
+@media (max-width: 390px) {
+  .burger._active:after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0px, 50%);
+    width: 20px;
   }
 }
 
@@ -650,7 +682,6 @@ header {
   header {
     background-image: url(../images/main-mobile.jpg);
     height: 251px;
-    width: fit-content;
   }
 }
 
@@ -682,7 +713,8 @@ header {
 }
 @media (max-width: 390px) {
   .header__mobile-logo {
-    display: inline-block;
+    display: block;
+    left: 16px;
   }
 }
 .header__logo {
@@ -743,11 +775,21 @@ header {
 
 @media (max-width: 390px) {
   .header__navigation {
-    display: none;
+    position: fixed;
+    top: 1px;
+    right: 100%;
     width: 165px;
     height: 250px;
     background-color: #F2785C;
     border-radius: 10px;
+    z-index: 5;
+    transition: left 0.9s ease 0s;
+  }
+}
+
+@media (max-width: 390px) {
+  .header__navigation._active {
+    right: 0;
   }
 }
 
@@ -757,6 +799,22 @@ header {
 @media (max-width: 390px) {
   .link-mobile {
     display: block;
+  }
+}
+
+@media (max-width: 390px) {
+  body._lock {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 390px) {
+  .block-page._active {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(41, 41, 41, 0.6);
+    overflow: hidden;
   }
 }
 
@@ -1163,10 +1221,6 @@ input {
   }
 }
 
-main {
-  width: fit-content;
-}
-
 footer {
   background-size: cover;
   height: 61px;
@@ -1178,7 +1232,6 @@ footer {
   footer {
     background-image: url(../images/footer-mobile.jpg);
     height: 65px;
-    width: fit-content;
   }
 }
 

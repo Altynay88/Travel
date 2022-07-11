@@ -2,17 +2,46 @@
     display: none;
 
     @include media-mobile {
-        margin-right: 5px;
-          position: relative;
+    margin-right: 5px;
+    position: relative;
     display: block;
     cursor: pointer;
-    z-index: 5;
+    z-index: 10;
     width: 30px;
     height: 15px;
     margin-bottom: 6px;
     }
 }
 
+.burger._active {
+    @include media-mobile {
+    margin-right: 106px;
+    top:-20px;
+    width: 30px;
+    height: 15px;
+    }
+}
+.burger._active span {
+    @include media-mobile {
+   transform: scale(0) translate(0px, -50%);
+    }
+}
+
+.burger._active:before {
+    @include media-mobile {
+   top:50%;
+   transform: rotate(-45deg) translate(0px, -50%);
+   width: 20px;
+    }
+}
+
+.burger._active:after {
+    @include media-mobile {
+   bottom:50%;
+   transform: rotate(45deg) translate(0px, 50%);
+   width: 20px;
+    }
+}
 .burger:after,
 .burger:before,
 .burger span {
