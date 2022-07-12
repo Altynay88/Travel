@@ -10,6 +10,7 @@
 
         @include media-mobile {
             background-image: url(../images/stories-mobile.jpg);
+            width: 390px;
         }
 
         &-opacity {

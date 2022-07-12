@@ -8,6 +8,7 @@ footer {
   @include media-mobile {
     background-image: url(../images/footer-mobile.jpg);
     height: 65px;
+    width: 390px;
   }
 }
 
