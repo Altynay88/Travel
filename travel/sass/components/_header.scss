@@ -9,7 +9,7 @@ header {
     @include media-mobile {
         background-image: url(../images/main-mobile.jpg);
         height: 251px;
-        width: 390px;
+         overflow-x:hidden;
     }
 }
 

@@ -23,7 +23,7 @@
     width: 892px;
 
     @include media-mobile {
-        width: 360px;
+        width: auto;
         margin-top: 37px;
     }
 }

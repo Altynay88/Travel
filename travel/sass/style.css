@@ -682,7 +682,7 @@ header {
   header {
     background-image: url(../images/main-mobile.jpg);
     height: 251px;
-    width: 390px;
+    overflow-x: hidden;
   }
 }
 
@@ -845,7 +845,7 @@ header {
 }
 @media (max-width: 390px) {
   .preview__form {
-    width: 360px;
+    width: auto;
     margin-top: 37px;
   }
 }
@@ -1131,7 +1131,7 @@ input {
 @media (max-width: 390px) {
   .stories__background {
     background-image: url(../images/stories-mobile.jpg);
-    width: 390px;
+    overflow-x: hidden;
   }
 }
 .stories__background-opacity {
@@ -1233,7 +1233,8 @@ footer {
   footer {
     background-image: url(../images/footer-mobile.jpg);
     height: 65px;
-    width: 390px;
+    min-width: 390px;
+    overflow-x: hidden;
   }
 }
 
