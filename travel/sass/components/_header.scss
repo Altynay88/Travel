@@ -4,10 +4,12 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-size: 100%;
+    
 
     @include media-mobile {
         background-image: url(../images/main-mobile.jpg);
         height: 251px;
+        width: 390px;
     }
 }
 
@@ -139,7 +141,6 @@ body._lock {
         position: fixed;
         width: 100vw;
         height: 100vh;
-        background-color: rgba(41, 41, 41, 0.6);
         overflow: hidden;
     }
 }
