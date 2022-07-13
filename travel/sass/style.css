@@ -1143,6 +1143,12 @@ input {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 320px) {
+  .destinations__dots-mobile {
+    top: 150px;
+    left: 132px;
+  }
+}
 .destinations .dot-mobile {
   border: none;
   background-color: #F2785C;
