@@ -23,6 +23,7 @@
 
         @include media-mobile {
             display: none;
+                max-width: 92.7%;
         }
     }
 
@@ -69,8 +70,11 @@
         @extend %transition;
 
         &--active {
-            background-color: $color-main;
+            @include media-mobile {
+                background-color: $color-main;
             opacity: 1;
+        }
+        
         }
     }
 
@@ -156,3 +160,4 @@
         }
     }
 }
+

@@ -904,6 +904,11 @@ input {
     padding-bottom: 4px;
   }
 }
+@media (max-width: 320px) {
+  .steps__icons {
+    justify-content: flex-start;
+  }
+}
 .steps__icons-inner {
   display: flex;
   flex-direction: column;
@@ -914,20 +919,28 @@ input {
     align-items: flex-start;
   }
 }
+@media (max-width: 390px) {
+  .steps__icons-first {
+    align-items: stretch;
+    padding: 0px 0px 0px 0px;
+    max-width: 75px;
+  }
+}
 .steps__icons-middle {
   margin-left: 66px;
 }
 @media (max-width: 390px) {
   .steps__icons-middle {
-    margin-left: 40px;
+    margin: 0px 0px 0px 16px;
     align-items: center;
-    width: 120px;
   }
 }
 @media (max-width: 390px) {
   .steps__icons-last {
     align-items: flex-end;
     text-align: right;
+    padding: 0px 0px 0px 0px;
+    max-width: 90px;
   }
 }
 .steps__icons-square {
@@ -1000,6 +1013,7 @@ input {
 @media (max-width: 390px) {
   .destinations__slider {
     display: none;
+    max-width: 92.7%;
   }
 }
 .destinations__slide {
@@ -1041,9 +1055,11 @@ input {
   border-radius: 50%;
   cursor: pointer;
 }
-.destinations .dot--active {
-  background-color: #F2785C;
-  opacity: 1;
+@media (max-width: 390px) {
+  .destinations .dot--active {
+    background-color: #F2785C;
+    opacity: 1;
+  }
 }
 .destinations__button {
   text-align: center;
@@ -1233,7 +1249,6 @@ footer {
   footer {
     background-image: url(../images/footer-mobile.jpg);
     height: 65px;
-    min-width: 390px;
     overflow-x: hidden;
   }
 }

@@ -22,6 +22,10 @@
             padding-top: 20px;
             padding-bottom: 4px;
         }
+         @include media-minmobile {
+           justify-content: flex-start;
+        }
+
 
         &-inner {
             display: flex;
@@ -33,13 +37,21 @@
             }
         }
 
+        &-first {
+
+            @include media-mobile {
+                align-items: stretch;
+                padding: 0px 0px 0px 0px;
+                max-width: 75px;
+            }
+        }
+
         &-middle {
             margin-left: 66px;
 
             @include media-mobile {
-                margin-left: 40px;
+                margin: 0px 0px 0px 16px;
                 align-items: center;
-                width: 120px;
             }
         }
 
@@ -47,6 +59,8 @@
             @include media-mobile {
                 align-items: flex-end;
                 text-align: right;
+                padding: 0px 0px 0px 0px;
+                max-width: 90px;
             }
         }
     }
