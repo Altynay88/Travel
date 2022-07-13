@@ -8,6 +8,9 @@
             margin: 0 auto;
             padding-bottom: 20px;
         }
+         @include media-minmobile {
+           width: 300px;
+        }
     }
 
     &__slider {
@@ -98,12 +101,21 @@
             overflow: hidden;
             margin-top: 20px;
         }
+         @include media-minmobile {
+           height: 180px;
+           width: 300px;
+        }
     }
 
     &__img-mobile {
         border-radius: 16px;
         position: relative;
+         @include media-minmobile {
+           width: 300px;
+        }
     }
+
+ 
 
     &__text-mobile {
         position: absolute;
@@ -131,6 +143,9 @@
         z-index: 5;
         top: 92px;
         left: 332px;
+         @include media-minmobile {
+           left: 270px;
+        }
     }
 
     &__dots-mobile {
