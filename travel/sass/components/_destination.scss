@@ -156,6 +156,10 @@
         width: 36px;
         display: flex;
         justify-content: space-between;
+         @include media-minmobile {
+           top:150px;
+           left: 132px
+        }
     }
 
     .dot-mobile {
