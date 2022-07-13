@@ -596,6 +596,7 @@ p {
     width: 30px;
     height: 15px;
     margin-bottom: 6px;
+    transition: all 0.8s ease;
   }
 }
 
@@ -605,6 +606,7 @@ p {
     top: -20px;
     width: 30px;
     height: 15px;
+    transition: all 0.8s ease;
   }
 }
 
@@ -778,19 +780,21 @@ header {
   .header__navigation {
     position: fixed;
     top: 1px;
-    right: 100%;
+    transform: translateX(100%);
+    right: 0;
     width: 165px;
     height: 250px;
     background-color: #F2785C;
     border-radius: 10px;
     z-index: 5;
-    transition: left 0.9s ease;
+    transition: all 0.8s ease;
   }
 }
 
 @media (max-width: 390px) {
   .header__navigation._active {
-    right: 0;
+    transform: translate(0);
+    transition: all 0.8s ease;
   }
 }
 
