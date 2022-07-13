@@ -112,7 +112,7 @@ header {
         background-color: $color-main;
         border-radius: 10px;
         z-index: 5;
-        transition: left 0.9s ease 0s;
+        transition: left 0.9s ease;
     }
 }
 
@@ -142,5 +142,7 @@ body._lock {
         width: 100vw;
         height: 100vh;
         overflow: hidden;
+        background:rgba(0, 0, 0, 0.5);
+        transition: 0.8s all;
     }
 }
