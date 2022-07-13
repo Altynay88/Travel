@@ -696,7 +696,7 @@ header {
 }
 @media (max-width: 390px) {
   .header {
-    background: none;
+    background: linear-gradient(to bottom, rgba(13, 96, 111, 0.7), rgba(13, 96, 111, 0) 70%);
     box-shadow: none;
     padding-top: 45px;
   }
