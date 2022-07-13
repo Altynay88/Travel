@@ -106,19 +106,21 @@ header {
     @include media-mobile {
         position: fixed;
         top: 1px;
-        right: 100%;
+        transform: translateX(100%);
+        right: 0;
         width: 165px;
         height: 250px;
         background-color: $color-main;
         border-radius: 10px;
         z-index: 5;
-        transition: left 0.9s ease;
+        transition: all 0.8s ease;
     }
 }
 
 .header__navigation._active {
     @include media-mobile {
-        right: 0;
+        transform: translate(0);
+         transition: all 0.8s ease;
     }
 }
 
