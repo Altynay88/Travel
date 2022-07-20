@@ -121,6 +121,7 @@ header {
     @include media-mobile {
         transform: translate(0);
          transition: all 0.8s ease;
+         z-index: 30;
     }
 }
 
@@ -133,12 +134,21 @@ header {
 }
 
 body._lock {
+    overflow: hidden;
     @include media-mobile {
         overflow: hidden;
     }
 }
 
 .block-page._active {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        background:rgba(0, 0, 0, 0.5);
+        transition: 0.8s all;
+        z-index: 10;
+        
     @include media-mobile {
         position: fixed;
         width: 100vw;

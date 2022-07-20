@@ -22,25 +22,58 @@
 </head>
 
 <body>
-     <div class="block-page"></div>
+    <div class="block-page"></div>
     <header>
         <div class="header">
             <div class="wrapper header__wrapper">
                 <span class="header__mobile-logo"><object data="images/logo.svg" type="image/svg+xml"></object></span>
                 <a class="header__logo" href="#">Travel Portal</a>
-                 <div class="burger"> <span></span></div>
+                <div class="burger"> <span></span></div>
                 <nav class="header__navigation">
                     <ul class="navigation">
                         <li><a class="navigation__link" href="#preview">How It Works</a></li>
                         <li><a class="navigation__link" href="#steps">Plan Your Trip</a></li>
                         <li><a class="navigation__link" href="#destinations">Destinations</a></li>
                         <li><a class="navigation__link" href="#stories">Travel Stories</a></li>
-                         <li><a class="navigation__link link-mobile" href="#">Account</a></li>
+                        <li><a class="navigation__link link-mobile show-modal-mobile " href="#">Account</a></li>
                         <li><a class="navigation__link link-mobile" href="#social">Social Media</a></li>
                     </ul>
                 </nav>
                 <div class="header__button">
-                    <button class="button">Login</button>
+                    <button class="button show-modal"> Login</button>
+                </div>
+                <div class="popup hidden">
+                    <div class="popup__wrapper">
+                        <h1 class="popup__title">Log in to your account</h1>
+                        <button class="popup__button popup__button-blue"> Sign In with Facebook</button>
+                        <button class="popup__button popup__button-white">Sign In with Google</button>
+                        <p class="popup__line">or</p>
+                        <p class="popup__text"></p>
+                        <p class="popup__input-text">E-mail</p>
+                        <input type="text" class="popup__input">
+                        <p class="popup__input-text">Password</p>
+                        <input type="text" class="popup__input">
+                        <button class="popup__button popup__button-darkblue">Sign In</button>
+                        <a href="#" class="popup__href">Forgot Your Password?</a>
+                        <hr class="popup__hr">
+                        <p class="popup__href-text">Don’t have an account? <a href="#" class="popup__href">Register</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="overlay hidden"></div>
+                <div class="popup signup__popup">
+                    <div class="popup__wrapper">
+                        <h1 class="popup__title">Create account</h1>
+                        <p class="popup__text"></p>
+                        <p class="popup__input-text">E-mail</p>
+                        <input type="text" class="popup__input">
+                        <p class="popup__input-text">Password</p>
+                        <input type="text" class="popup__input">
+                        <button class="popup__button popup__button-darkblue">Sign Up</button>
+                        <hr class="popup__hr">
+                        <p class="popup__href-text">Already have an account? <a href="#" class="popup__href">Log in</a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -85,15 +118,15 @@
             <div class="destinations__wrapper">
                 <h2>Popular destinations</h2>
                 <div class="destinations__slider">
-                    <div class="destinations__slide">
+                    <div class="destinations__slide destinations__slide-left slide--1">
                         <img class="destinations__img" src="images/Island.jpg" alt="Spain">
                         <p class="destinations__text"><span>Spain</span></p>
                     </div>
-                    <div class="destinations__slide">
+                    <div class="destinations__slide slide--2">
                         <img class="destinations__img" src="images/Japan.jpg" alt="Japan">
                         <p class="destinations__text"><span>Japan</span></p>
                     </div>
-                    <div class="destinations__slide">
+                    <div class="destinations__slide  destinations__slide-right slide--3">
                         <img class="destinations__img" src="images/USA.jpg" alt="USA">
                         <p class="destinations__text"><span>USA</span></p>
                     </div>
@@ -107,11 +140,11 @@
                     </div>
                     <div class="destinations__slide-mobile">
                         <img class="destinations__img-mobile" src="images/japan-mobile.jpg" alt="Japan">
-                        <!-- <p class="destinations__text-mobile"><span>Japan</span></p> -->
+                        <p class="destinations__text-mobile"><span>Japan</span></p>
                     </div>
                     <div class="destinations__slide-mobile">
                         <img class="destinations__img-mobile" src="images/usa-mobile.jpg" alt="USA">
-                        <!-- <p class="destinations__text-mobile"><span>USA</span></p> -->
+                        <p class="destinations__text-mobile"><span>USA</span></p>
                     </div>
                     <div class="destinations__dots-mobile">
                         <button class=" dot-mobile--active dot-mobile "></button>
@@ -120,9 +153,9 @@
                     </div>
                 </div>
                 <div class="destinations__dots">
-                    <button class="dot"></button>
+                    <!-- <button class="dot"></button>
                     <button class="dot dot--active"></button>
-                    <button class="dot"></button>
+                    <button class="dot"></button> -->
                 </div>
                 <div class="destinations__button">
                     <button class="button button_long">Find More</button>

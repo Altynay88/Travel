@@ -1,0 +1,201 @@
+.popup {
+    position: absolute;
+    width: 650px;
+    height: 660px;
+    top: -3%;
+    left: 25%;
+    border-radius: 16px;
+    margin: 0 auto;
+    background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
+    z-index: 1000;
+
+    @include media-mobile {
+        max-width: 360px;
+        height: 660px;
+        left: 6px;
+        top: 0;
+    }
+
+    @include media-minmobile {
+        max-width: 300px;
+        height: 700px;
+        left: 0px;
+        top: 0;
+    }
+
+    &__wrapper {
+        padding: 25px 45px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-family: 'Aleo', serif;
+        color: $color-buttons;
+        @include font(32px, 700, normal, 38.4px);
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 30px;
+
+        @include media-mobile {
+            @include font(24px, 700, normal, 29px);
+        }
+    }
+
+    &__button {
+        width: 560px;
+        height: 56px;
+        margin: 0 auto;
+        border-radius: 10px;
+        border-style: none;
+        @extend %font-additional;
+        color: $color-white;
+        @include font(20px, 400, normal, 26px);
+        box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+        display: flex;
+        align-items: center;
+
+        @include media-mobile {
+            max-width: 360px;
+            width: 100%;
+            @include font(14px, 400, normal, 24px);
+        }
+
+        @include media-minmobile {
+            @include font(12px, 400, normal, 24px);
+        }
+
+        &-blue {
+            background-color: $color-facebook;
+            margin-bottom: 20px;
+            padding-left: 29%;
+
+            &::before {
+                content: " ";
+                background-image: url(../images/facebook.png);
+                height: 24px;
+                width: 24px;
+                display: flex;
+                margin-right: 15px;
+            }
+        }
+
+        &-white {
+            color: $color-buttons;
+            background-color: $color-white;
+            margin-bottom: 30px;
+            padding-left: 31%;
+
+            &::before {
+                content: " ";
+                background-image: url(../images/google.png);
+                height: 24px;
+                width: 24px;
+                display: flex;
+                margin-right: 15px;
+            }
+        }
+
+        &-darkblue {
+            background-color: $color-buttons;
+            margin-top: 15px;
+            padding-left: 44.5%;
+        }
+    }
+
+    &__line {
+        font-family: 'Aleo', serif;
+        @include font(20px, 700, normal, 24px);
+        text-align: center;
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+
+        &::before {
+            display: flex;
+            content: " ";
+            height: 2px;
+            width: 261px;
+            background: rgba(13, 96, 111, 0.5);
+        }
+
+        &::after {
+            display: flex;
+            content: " ";
+            height: 2px;
+            width: 261px;
+            background: rgba(13, 96, 111, 0.5);
+        }
+    }
+
+    &__input-text {
+        font-family: 'Aleo', serif;
+        @include font(16px, 400, normal, 19.2px);
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    &__input {
+        height: 54px;
+        margin-bottom: 10px;
+        padding: 25px 41px;
+    }
+
+    &__href {
+        font-family: 'Aleo', serif;
+        @include font(15px, 700, normal, 18px);
+        color: $color-buttons;
+        margin: 0 auto;
+        margin-top: 7px;
+    }
+
+    &__hr {
+        border: none;
+        height: 2px;
+        color: $color-buttons;
+        background-color: $color-buttons;
+        width: 560px;
+        margin: 0 auto;
+        margin-top: 26px;
+        margin-bottom: 20px;
+
+        @include media-mobile {
+            max-width: 360px;
+            width: 100%;
+        }
+    }
+
+    &__href-text {
+        font-family: 'Aleo', serif;
+        @include font(15px, 700, normal, 18px);
+        color: $color-buttons;
+        margin: 0 auto;
+        margin-bottom: 23px;
+    }
+}
+
+.signup__popup {
+    height: 436px;
+    display: none;
+
+    .popup__title {
+        margin-bottom: 20px;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+@include media-mobile {
+    .overlay {
+        position: fixed;
+        width: 100%;
+        height: 1100%;
+        overflow: hidden;
+        background: rgba(0, 0, 0, 0.5);
+        transition: 0.8s all;
+        z-index: 10;
+        margin-left: -15px;
+    }
+}
