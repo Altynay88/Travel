@@ -31,7 +31,23 @@
     }
 
     &__slide {
-        transform: translateX(-540px);
+  position: absolute;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* THIS creates the animation! */
+  transition: transform 1s;
+        // transform: translateX(-860px);
+    }
+    &__slide-left {
+        transform: translateX(-10%);
+    }
+
+    &__slide-right {
+        transform: translateX(10%);
     }
 
     &__img {
@@ -107,6 +123,11 @@
         }
     }
 
+    &__slide-mobile {
+            @include media-mobile {
+       position: relative;
+        }
+    }
     &__img-mobile {
         border-radius: 16px;
         position: relative;
@@ -150,7 +171,7 @@
 
     &__dots-mobile {
         position: absolute;
-        z-index: 5;
+        z-index: 15;
         top: 190px;
         left: 162px;
         width: 36px;
