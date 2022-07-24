@@ -1025,16 +1025,25 @@ input {
     width: 300px;
   }
 }
+.destinations__slider-outer {
+  width: 800px;
+  height: 810px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 80px;
+}
 .destinations__slider {
+  width: 2520px;
+  left: -860px;
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
   display: flex;
-  overflow: hidden;
   height: 845px;
   column-gap: 60px;
   padding-top: 46px;
   margin-bottom: 24px;
+  transition: all ease 0.5s;
 }
 @media (max-width: 390px) {
   .destinations__slider {
@@ -1043,19 +1052,11 @@ input {
   }
 }
 .destinations__slide {
-  position: absolute;
-  width: 100%;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* THIS creates the animation! */
   transition: transform 1s;
-}
-.destinations__slide-left {
-  transform: translateX(-10%);
-}
-.destinations__slide-right {
-  transform: translateX(10%);
 }
 .destinations__img {
   position: relative;
@@ -1092,6 +1093,9 @@ input {
   width: 20px;
   border-radius: 50%;
   cursor: pointer;
+}
+.destinations .dot--active {
+  opacity: 1;
 }
 @media (max-width: 390px) {
   .destinations .dot--active {

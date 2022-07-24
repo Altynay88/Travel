@@ -117,18 +117,25 @@
         <section class="destinations" id="destinations">
             <div class="destinations__wrapper">
                 <h2>Popular destinations</h2>
-                <div class="destinations__slider">
-                    <div class="destinations__slide destinations__slide-left slide--1">
-                        <img class="destinations__img" src="images/Island.jpg" alt="Spain">
-                        <p class="destinations__text"><span>Spain</span></p>
+                <div class="destinations__slider-outer">
+                    <div class="destinations__slider">
+                        <div class="destinations__slide" id="slide-1">
+                            <img class="destinations__img" src="images/Island.jpg" alt="Spain">
+                            <p class="destinations__text"><span>Spain</span></p>
+                        </div>
+                        <div class="destinations__slide" id="slide-2">
+                            <img class="destinations__img" src="images/Japan.jpg" alt="Japan">
+                            <p class="destinations__text"><span>Japan</span></p>
+                        </div>
+                        <div class="destinations__slide" id="slide-3">
+                            <img class="destinations__img" src="images/USA.jpg" alt="USA">
+                            <p class="destinations__text"><span>USA</span></p>
+                        </div>
                     </div>
-                    <div class="destinations__slide slide--2">
-                        <img class="destinations__img" src="images/Japan.jpg" alt="Japan">
-                        <p class="destinations__text"><span>Japan</span></p>
-                    </div>
-                    <div class="destinations__slide  destinations__slide-right slide--3">
-                        <img class="destinations__img" src="images/USA.jpg" alt="USA">
-                        <p class="destinations__text"><span>USA</span></p>
+                    <div class="destinations__dots">
+                        <button class="dot dot-1"></button>
+                        <button class="dot dot--active dot-2"></button>
+                        <button class="dot dot-3"></button>
                     </div>
                 </div>
                 <div class="destinations__slider-mobile">
@@ -151,11 +158,6 @@
                         <button class="dot-mobile"></button>
                         <button class="dot-mobile"></button>
                     </div>
-                </div>
-                <div class="destinations__dots">
-                    <!-- <button class="dot"></button>
-                    <button class="dot dot--active"></button>
-                    <button class="dot"></button> -->
                 </div>
                 <div class="destinations__button">
                     <button class="button button_long">Find More</button>
