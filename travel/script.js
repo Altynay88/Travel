@@ -6,18 +6,19 @@ const blockPage = document.querySelector(".block-page");
 const OpenPopup = document.querySelector(".show-modal");
 const OpenPopupMobile = document.querySelector(".show-modal-mobile");
 const overlay = document.querySelector(".overlay");
-
+const openRegister = document.querySelector('.register');
+const signUpPopup = document.querySelector(".signup__popup");
+const openLogin = document.querySelector(".login");
 
 OpenPopup.addEventListener("click", function (e) {
   popup.classList.remove("hidden");
-  document.body.classList.toggle("_lock");
   blockPage.classList.toggle("_active");
 });
 
 blockPage.addEventListener("click", () => {
   popup.classList.add("hidden");
+  signUpPopup.classList.add("hidden");
   blockPage.classList.remove("_active");
-  document.body.classList.remove("_lock");
 });
 
 OpenPopupMobile.addEventListener("click", function (e) {
@@ -28,6 +29,17 @@ OpenPopupMobile.addEventListener("click", function (e) {
 overlay.addEventListener("click", () => {
   popup.classList.add("hidden");
   overlay.classList.add("hidden");
+  signUpPopup.classList.add("hidden");
+});
+
+openRegister.addEventListener("click", () => {
+  popup.classList.add("hidden");
+  signUpPopup.classList.remove("hidden");
+});
+
+openLogin.addEventListener("click", () => {
+  signUpPopup.classList.add("hidden");
+  popup.classList.remove("hidden");
 });
 
 const signIn = document.querySelector(".sign");
