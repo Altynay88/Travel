@@ -20,6 +20,10 @@
         margin: 0 auto;
         position: relative;
         margin-bottom: 80px;
+
+        @include media-mobile {
+            display: none;
+        }
     }
 
     &__slider {
@@ -36,7 +40,7 @@
         padding-top: 46px;
         margin-bottom: 24px;
 
-        transition: all ease .5s;
+        transition: all ease 1s;
 
         @include media-mobile {
             display: none;
@@ -50,8 +54,6 @@
         align-items: center;
         justify-content: center;
         transition: transform 1s;
-
-        // transform: translateX(-540px);
     }
 
     &__img {
@@ -116,12 +118,13 @@
         display: none;
 
         @include media-mobile {
-            display: block;
+            display: flex;
             position: relative;
             width: 360px;
             height: 210px;
             overflow: hidden;
             margin-top: 20px;
+            transition: transform 1s;
         }
 
         @include media-minmobile {
@@ -132,7 +135,9 @@
 
     &__slide-mobile {
         @include media-mobile {
-            position: relative;
+            position: absolute;
+            transition: transform 1s;
+            padding-right: 10px;
         }
     }
 
@@ -165,7 +170,8 @@
         position: absolute;
         z-index: 5;
         top: 90px;
-        left: 7px;
+        left: 10px;
+        transform: rotate(-180deg);
     }
 
     &__arrow-right {
@@ -205,7 +211,7 @@
         cursor: pointer;
         @extend %transition;
 
-        &-mobile--active {
+        &--active {
             background-color: $color-main;
             opacity: 1;
         }

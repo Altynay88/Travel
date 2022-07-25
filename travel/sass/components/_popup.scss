@@ -70,6 +70,10 @@
             margin-bottom: 20px;
             padding-left: 29%;
 
+            @include media-mobile {
+                padding-left: 19%;
+            }
+
             &::before {
                 content: " ";
                 background-image: url(../images/facebook.png);
@@ -86,6 +90,10 @@
             margin-bottom: 30px;
             padding-left: 31%;
 
+            @include media-mobile {
+                padding-left: 21%;
+            }
+
             &::before {
                 content: " ";
                 background-image: url(../images/google.png);
@@ -100,6 +108,10 @@
             background-color: $color-buttons;
             margin-top: 15px;
             padding-left: 44.5%;
+
+            @include media-mobile {
+                padding-left: 42%;
+            }
         }
     }
 

@@ -1032,6 +1032,11 @@ input {
   position: relative;
   margin-bottom: 80px;
 }
+@media (max-width: 390px) {
+  .destinations__slider-outer {
+    display: none;
+  }
+}
 .destinations__slider {
   width: 2520px;
   left: -860px;
@@ -1043,7 +1048,7 @@ input {
   column-gap: 60px;
   padding-top: 46px;
   margin-bottom: 24px;
-  transition: all ease 0.5s;
+  transition: all ease 1s;
 }
 @media (max-width: 390px) {
   .destinations__slider {
@@ -1117,12 +1122,13 @@ input {
 }
 @media (max-width: 390px) {
   .destinations__slider-mobile {
-    display: block;
+    display: flex;
     position: relative;
     width: 360px;
     height: 210px;
     overflow: hidden;
     margin-top: 20px;
+    transition: transform 1s;
   }
 }
 @media (max-width: 320px) {
@@ -1133,7 +1139,9 @@ input {
 }
 @media (max-width: 390px) {
   .destinations__slide-mobile {
-    position: relative;
+    position: absolute;
+    transition: transform 1s;
+    padding-right: 10px;
   }
 }
 .destinations__img-mobile {
@@ -1162,7 +1170,8 @@ input {
   position: absolute;
   z-index: 5;
   top: 90px;
-  left: 7px;
+  left: 10px;
+  transform: rotate(-180deg);
 }
 .destinations__arrow-right {
   position: absolute;
@@ -1200,7 +1209,7 @@ input {
   border-radius: 50%;
   cursor: pointer;
 }
-.destinations .dot-mobile-mobile--active {
+.destinations .dot-mobile--active {
   background-color: #F2785C;
   opacity: 1;
 }
@@ -1460,6 +1469,11 @@ footer {
   margin-bottom: 20px;
   padding-left: 29%;
 }
+@media (max-width: 390px) {
+  .popup__button-blue {
+    padding-left: 19%;
+  }
+}
 .popup__button-blue::before {
   content: " ";
   background-image: url(../images/facebook.png);
@@ -1474,6 +1488,11 @@ footer {
   margin-bottom: 30px;
   padding-left: 31%;
 }
+@media (max-width: 390px) {
+  .popup__button-white {
+    padding-left: 21%;
+  }
+}
 .popup__button-white::before {
   content: " ";
   background-image: url(../images/google.png);
@@ -1486,6 +1505,11 @@ footer {
   background-color: #0D606F;
   margin-top: 15px;
   padding-left: 44.5%;
+}
+@media (max-width: 390px) {
+  .popup__button-darkblue {
+    padding-left: 42%;
+  }
 }
 .popup__line {
   font-family: "Aleo", serif;
