@@ -2,7 +2,7 @@
     position: absolute;
     width: 650px;
     height: 660px;
-    top: -3%;
+    top: 5%;
     left: 25%;
     border-radius: 16px;
     margin: 0 auto;
@@ -109,6 +109,13 @@
             margin-top: 15px;
             padding-left: 44.5%;
 
+            &:hover {
+                color: $color-hover;
+                text-decoration: underline;
+                @extend %transition;
+                cursor: pointer;
+            }
+
             @include media-mobile {
                 padding-left: 42%;
             }
@@ -187,8 +194,8 @@
 }
 
 .signup__popup {
+    top:20%;
     height: 436px;
-    display: none;
 
     .popup__title {
         margin-bottom: 20px;

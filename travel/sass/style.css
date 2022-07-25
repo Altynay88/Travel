@@ -405,7 +405,7 @@ ul {
   font-family: "Red Hat Text", sans-serif;
 }
 
-.destinations .dot-mobile, .destinations .dot, .header__logo:hover, .button:hover, .navigation__link:hover {
+.popup__button-darkblue:hover, .destinations .dot-mobile, .destinations .dot, .header__logo:hover, .button:hover, .navigation__link:hover {
   transition: all 0.3s;
 }
 
@@ -1384,7 +1384,7 @@ footer {
   position: absolute;
   width: 650px;
   height: 660px;
-  top: -3%;
+  top: 5%;
   left: 25%;
   border-radius: 16px;
   margin: 0 auto;
@@ -1506,6 +1506,11 @@ footer {
   margin-top: 15px;
   padding-left: 44.5%;
 }
+.popup__button-darkblue:hover {
+  color: #cdcdcd;
+  text-decoration: underline;
+  cursor: pointer;
+}
 @media (max-width: 390px) {
   .popup__button-darkblue {
     padding-left: 42%;
@@ -1588,8 +1593,8 @@ footer {
 }
 
 .signup__popup {
+  top: 20%;
   height: 436px;
-  display: none;
 }
 .signup__popup .popup__title {
   margin-bottom: 20px;
