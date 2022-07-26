@@ -50,6 +50,13 @@ signIn.addEventListener("click", () => {
   alert("Your e-mail: " + email + " " + "Your password: " + password);
 });
 
+const signUp = document.querySelector(".signUp");
+signUp.addEventListener("click", () => {
+  const emailUp = document.getElementsByTagName("input")[2].value;
+  const passwordUp = document.getElementsByTagName("input")[3].value;
+  alert("Your e-mail: " + emailUp + " " + "Your password: " + passwordUp);
+});
+
 // BURGER MENU
 const BURGER = document.querySelector(".burger");
 const navigation = document.querySelector(".header__navigation");
